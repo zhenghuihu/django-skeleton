@@ -1,0 +1,5 @@
+site wide templates 
+examples
+    - layout (base)
+    - 404.html
+    - etc ...

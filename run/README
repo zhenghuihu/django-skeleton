@@ -1,0 +1,5 @@
+directory intended to use on production environment
+
+- store collected static files 
+- secret key file 
+- log files

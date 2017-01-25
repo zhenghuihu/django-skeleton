@@ -1,0 +1,4 @@
+# include base
+-r base.txt
+
+# dev specific packages

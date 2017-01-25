@@ -1,0 +1,4 @@
+requirements for dev/test and production
+for use by python-pip
+e.g
+    pip install -r requirements/dev.txt
