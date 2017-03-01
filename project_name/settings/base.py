@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import sys
 
 # ========================
 # GENERIC
@@ -22,6 +23,9 @@ APP_NAME = '''{{ project_name }}'''
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Fetch the project_root
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
+
+# add library folder to path
+sys.path.append(os.path.join(PROJECT_ROOT, 'libs')
 
 ROOT_URLCONF = '%s.urls' % APP_NAME
 
