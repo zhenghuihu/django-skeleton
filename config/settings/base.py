@@ -17,7 +17,7 @@ import sys
 # GENERIC
 # ========================
 # Application definition
-APP_NAME = '''{{ project_name }}'''
+APP_NAME = '{{ project_name }}'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,11 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
 
 # add library folder to path
-sys.path.append(os.path.join(PROJECT_ROOT, 'libs')
+sys.path.append(os.path.join(PROJECT_ROOT, 'libs'))
 
-ROOT_URLCONF = '%s.urls' % APP_NAME
+ROOT_URLCONF = 'config.urls'
 
-WSGI_APPLICATION = '%s.wsgi.application' % APP_NAME
+WSGI_APPLICATION = 'config.wsgi.application'
 
 # ========================
 # libraries
