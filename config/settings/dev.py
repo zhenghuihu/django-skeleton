@@ -1,5 +1,10 @@
+'''
+local development settings
+'''
 # include all base settings
-from .base import *
+from .base import *                 # pylint: disable=W0401,W0614
+# include credentials (not included in repo)
+from . import credentials as crd    # pylint: disable=W0401,W0611
 
 DEBUG = True
 
@@ -9,8 +14,7 @@ ALLOWED_HOSTS = []
 # SECRET_KEY 
 # https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY
 # ========================
-# just a random string 
-SECRET_KEY = 'z0y2wi6h0r&7qeaj5%wv35ktm+d-w%h9qzx3oxj96a9vfrn=s_'
+SECRET_KEY = crd.SECRET_KEY
 
 # ========================
 # Database

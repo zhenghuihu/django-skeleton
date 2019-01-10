@@ -1,5 +1,10 @@
+'''
+production setting
+'''
 # include all base settings
-from base import *
+from .base import *                 # pylint: disable=W0401,W0614
+# include credentials (not included in repo)
+from . import credentials as crd    # pylint: disable=W0401,W0611
 
 # disable debugging
 DEBUG = False
@@ -8,10 +13,7 @@ DEBUG = False
 # SECRET_KEY 
 # https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY
 # ========================
-# SECRET_KEY is read from file, not included in repo
-SECRET_FILE = os.path.join(PROJECT_ROOT, 'run', 'SECRET.key')
-SECRET_KEY = open(SECRET_FILE).read().strip()
-
+SECRET_KEY = crd.SECRET_KEY
 
 # ========================
 # STATIC_ROOT
